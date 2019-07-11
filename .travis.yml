@@ -5,3 +5,6 @@ services:
 
 before_install:
   - docker build -t souravkodali/docker-react -f Dockerfile.dev .  
+
+script:
+  - docker run souravkodali/docker-react npm run test -- --coverage
